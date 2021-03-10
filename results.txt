@@ -1,0 +1,25 @@
+C:\Users\maxla\Documents\Assurity>python -m pytest -v  
+===================================================================================================== test session starts ======================================================================================================
+platform win32 -- Python 3.9.2, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- C:\Users\maxla\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\maxla\Documents\Assurity
+collected 3 items
+
+test_test.py::test_Name PASSED                                                                                                                                                                                            [ 33%]
+test_test.py::test_CanRelist PASSED                                                                                                                                                                                       [ 66%] 
+test_test.py::test_Gallery FAILED                                                                                                                                                                                         [100%]
+
+=========================================================================================================== FAILURES =========================================================================================================== 
+_________________________________________________________________________________________________________ test_Gallery _________________________________________________________________________________________________________ 
+
+    def test_Gallery():
+        promotions = response_body['Promotions']
+        for promotion in promotions:
+E               AssertionError: assert 'Good position in category' == '2x larger image'
+E                 - 2x larger image
+E                 + Good position in category
+
+test_test.py:36: AssertionError
+=================================================================================================== short test summary info ====================================================================================================
+FAILED test_test.py::test_Gallery - AssertionError: assert 'Good position in category' == '2x larger image'                                       ============================================================================== 
+================================================================================================= 1 failed, 2 passed in 1.05s ==================================================================================================                                                                    ============================================================================== 
